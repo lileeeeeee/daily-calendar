@@ -71,6 +71,15 @@ if (currentTime < (parseInt(hour)* -1)) {
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
 
+    $.each(blockTime, function () {
+
+      var checkId = $(this).attr('id');
+      var displayStored = blockTime.children('textarea');
+      console.log(blockTime);
+      console.log(checkId);
+      console.log(displayStored);
+      displayStored.text(localStorage.getItem(checkId));
+    })
 
   //
   // TODO: Add code to display the current date in the header of the page.
